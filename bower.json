@@ -1,0 +1,21 @@
+{
+  "name": "dont_forget",
+  "homepage": "https://github.com/rmpardee/2016-05-mvp",
+  "authors": [
+    "Ruth M. Pardee <ruthmpardee@gmail.com>"
+  ],
+  "description": "task list",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "^1.3.3"
+  }
+}
