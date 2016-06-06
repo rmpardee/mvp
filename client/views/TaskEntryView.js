@@ -1,12 +1,12 @@
 
 var TaskEntryView = Backbone.View.extend({
 
-  tagName: 'tr',
+  tagName: 'li',
 
-  template: _.template('<td>(<%= name %>)</td><td><%= frequency %></td>'),
+  template: _.template($('#item-template').html()),
 
   render: function() {
-    return this.$el.html(this.template(this.model.attributes));
+    return this.$el.html(this.template(this.model.toJSON()));
   }
 
 

@@ -1,8 +1,10 @@
-$(function(){
 
-  // build a view for the top level of the whole app
-  var taskView = new TaskQueueView();
+// $(function(){
+
+  // var app = new AppView();
+
+  // var app = new AppModel({model: app});
 
   // put the view onto the screen
-  $('body').append(taskView.render());
-});
+  // $('body').append(app.render());
+// });

@@ -1,4 +1,8 @@
+var app = {};
 
-var TaskModel = Backbone.Model.extend({
-  // not much needed in the actual model itself for now
+app.TaskModel = Backbone.Model.extend({
+  defaults: {
+    name: '',
+    completed: false
+  }
 });
