@@ -8,14 +8,12 @@ var AppView = Backbone.View.extend({
     'submit': 'createTaskOnSubmit'
   },
 
-  submission: {
-    'name': this.$('#task-text')[0].value,
-    'frequency': this.$('#new-task-form form :selected')
-  },
 
   initialize: function() {
     // save the text that was input
     this.input = this.$('#task-text');
+    // save the frequency that was selected from the dropdown
+    this.frequency = this.$('#frequencies-dropdown');
     // whenever the form submits, run the createTaskOnSubmit method
     app.taskList.on('submit', this.createTaskOnSubmit, this);
   },
@@ -23,9 +21,8 @@ var AppView = Backbone.View.extend({
   //this.input[0].value
   createTaskOnSubmit: function(e) {
     e.preventDefault();
-    console.log("this.input[0].value: ", this.input[0].value);
     // add the new task item to the existing taskList collection
-    app.taskList.add({name: this.input[0].value});
+    app.taskList.add({name: this.input[0].value, frequency: this.frequency[0].value});
     // reset the input bar to empty
     this.input.val('');
   }

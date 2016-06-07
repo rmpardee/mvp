@@ -3,6 +3,8 @@ var app = {};
 app.TaskModel = Backbone.Model.extend({
   defaults: {
     name: '',
-    frequency: 1
+    frequency: {
+      options: ['weekly', 'fortnightly', 'monthly', 'six-months', 'annually']
+    }
   }
 });
