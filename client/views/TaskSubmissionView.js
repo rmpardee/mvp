@@ -34,9 +34,22 @@ var AppView = Backbone.View.extend({
 
   createScheduledTasks: function(name, frequency) {
     // add the new scheduled items to the existing scheduleList collection
+
+    var conversion = {
+      weekly: 7,
+      fortnightly: 14,
+      monthly: 30,
+      'six-months': 30*6,
+      annually: 365
+    }
+
     var todaysDate = new Date();
-    app.scheduleList.add({name: name, date: todaysDate});
-    console.log("frequency: ", frequency);
+
+    for (var i = 0; i < 3; i++) {
+      var incrementedDate = todaysDate.getDate() + conversion[frequency];
+      var newDate = new Date(todaysDate.setDate(incrementedDate));
+      app.scheduleList.add({name: name, date: newDate});
+    }
   }
 });
 
