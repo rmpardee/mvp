@@ -18,13 +18,18 @@ var AppView = Backbone.View.extend({
     app.taskList.on('submit', this.createTaskOnSubmit, this);
   },
 
-  //this.input[0].value
   createTaskOnSubmit: function(e) {
     e.preventDefault();
     // add the new task item to the existing taskList collection
-    app.taskList.add({name: this.input[0].value, frequency: this.frequency[0].value});
-    // reset the input bar to empty
+    var name = this.input[0].value;
+    app.taskList.add({name: name, frequency: this.frequency[0].value});
+    // reset the form to its original state
     this.input.val('');
+    this.frequency.val('weekly');
+
+    // add the new scheduled items to the existing scheduleList collection
+    var todaysDate = 'today';
+    app.scheduleList.add({name: name, date: todaysDate});
   }
 });
 
