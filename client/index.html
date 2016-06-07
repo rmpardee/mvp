@@ -6,19 +6,18 @@
 <body>
 
   <div id='dont-forget-app'>
-    <input id='new-task' placeholder='What do you want to remember to do?' autofocus>
 
-    <div id='main'>
-      <ul id='task-list'>
-      </ul>
-    </div>
+    <form id='new-task'>
+      <input id='task-text' placeholder='What do you want to remember to do?' autofocus>
+      <input id='task-submit' type='submit' value='Submit'>
+    </form>
+
+    <div id='task-list-div'></div>
+
+    <!-- <table id='task-list'>
+    </table> -->
+
   </div>
-
-  <script type="text/template" id="item-template">
-    <div class="view">
-      <label><%- name %></label>
-    </div>
-  </script>  
 
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -35,6 +34,6 @@
 
   <script src="views/TaskEntryView.js"></script>
   <script src="views/TaskListView.js"></script>
-  <!-- <script src="views/AppView.js"></script> -->
+  <script src="views/AppView.js"></script>
 </body>
 </html>
