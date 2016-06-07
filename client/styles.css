@@ -1,0 +1,49 @@
+body {
+  background-color: rgb(44, 132, 148);
+  font-family: 'Raleway', sans-serif;
+  margin: auto;
+  padding: 50px;
+  text-align: center;
+}
+
+#task-text {
+  width: 50%;
+  height:50px;
+  font-size:14pt;
+  padding: 10px;
+}
+
+#task-submit {
+  margin: 40px;
+  font-size: 1.5em;
+  border-radius: 10px 10px 10px 10px;
+  border: 2px black;
+  padding: 10px;
+  background-color: rgb(230, 241, 243);
+  font-family: 'Raleway', sans-serif;
+}
+
+#task-submit:hover {background-color: rgb(147, 197, 210)}
+
+#task-list table {
+  border-collapse: collapse;
+  width: 25%;
+  margin: auto;
+  font-size: 1.35em;
+  line-height: 2.5em;
+  margin-bottom: 50px;
+}
+
+tr:nth-child(even) {
+  color: rgb(230, 241, 243);
+}
+
+tr:nth-child(odd) {
+  color: rgb(230, 241, 243);
+}
+
+tr:hover {background-color: rgb(147, 197, 210)}
+
+td {
+    border-bottom: 1px solid black;
+}

@@ -2,13 +2,15 @@
 <html>
 <head>
   <title>Don't Forget!</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Raleway:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
 
   <div id='dont-forget-app'>
 
     <form id='new-task-form'>
-      <input id='task-text' placeholder='What do you want to remember to do?' autofocus>
+      <input id='task-text' placeholder='What do you want to remember to do?' autofocus><br>
       <select id='frequencies-dropdown' name='frequencies'>
         <option value='weekly'>Weekly</option>
         <option value='fortnightly'>Fortnightly</option>
@@ -19,9 +21,13 @@
       <input id='task-submit' type='submit' value='Submit'>
     </form>
 
-    <div id='task-list'></div>
+    <div id='task-list'>
+      <h1>My Tasks</h1>
+    </div>
 
-    <div id='schedule-list'></div>
+    <div id='schedule-list'>
+      <h2>My Schedule</h2>
+    </div>
 
   </div>
 

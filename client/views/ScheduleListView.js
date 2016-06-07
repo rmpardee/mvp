@@ -14,7 +14,7 @@ var ScheduleListView = Backbone.View.extend({
   render: function() {
     this.$el.children().detach();
     // inside the <table> html, add the <th> and then append each thing in the collection
-    this.$el.html('<th>Schedule</th>').append(
+    this.$el.html('<h2>My Schedule</h2>').append(
       this.collection.map(function(schedule){
         return new ScheduleEntryView({model: schedule}).render();
       })
