@@ -22,14 +22,21 @@ var AppView = Backbone.View.extend({
     e.preventDefault();
     // add the new task item to the existing taskList collection
     var name = this.input[0].value;
-    app.taskList.add({name: name, frequency: this.frequency[0].value});
+    var frequency = this.frequency[0].value;
+    app.taskList.add({name: name, frequency: frequency});
     // reset the form to its original state
     this.input.val('');
     this.frequency.val('weekly');
 
+    // pass the name onto the next helper function
+    this.createScheduledTasks(name, frequency);    
+  },
+
+  createScheduledTasks: function(name, frequency) {
     // add the new scheduled items to the existing scheduleList collection
-    var todaysDate = 'today';
+    var todaysDate = new Date();
     app.scheduleList.add({name: name, date: todaysDate});
+    console.log("frequency: ", frequency);
   }
 });
 
