@@ -16,8 +16,14 @@ var formatDate = function(date) {
   return monthNames[monthIndex] + ' ' + day + ', ' + year;
 };
 
-var testDate = 'Tue Jun 14 2016 15:11:35 GMT-0700 (PDT)';
-// console.log("testDate: ", formatDate(testDate));
-var today = new Date();
-console.log("today's date: ", formatDate(today));
+var frequencyNames = {
+  weekly: 'Every Week',
+  fortnightly: 'Every Two Weeks',
+  monthly: 'Every Month',
+  'six-months': 'Every 6 Months',
+  annually: 'Every Year'
+}
 
+var formatFrequency = function(freq) {
+  return frequencyNames[freq];
+}

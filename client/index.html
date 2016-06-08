@@ -7,11 +7,11 @@
 </head>
 <body>
 
-  <div id='dont-forget-app'>
+  <!-- <div id='dont-forget-app'> -->
 
     <form id='new-task-form'>
       <input id='task-text' placeholder='What do you want to remember to do?' autofocus><br>
-      <select id='frequencies-dropdown' name='frequencies'>
+      <select class='dropdown' id='frequencies-dropdown' name='frequencies'>
         <option value='weekly'>Weekly</option>
         <option value='fortnightly'>Fortnightly</option>
         <option value='monthly'>Monthly</option>
@@ -21,20 +21,23 @@
       <input id='task-submit' type='submit' value='Submit'>
     </form>
 
-    <div id='task-list'>
-      <h1>My Tasks</h1>
-    </div>
+      <div class='tables-div'>
+        <div id='task-list' class='.col-xs-12'>
+          <h2>My Tasks</h2>
+        </div>
 
-    <div id='schedule-list'>
-      <h2>My Schedule</h2>
-    </div>
+        <div id='schedule-list' class='.col-xs-12'>
+          <h2>My Schedule</h2>
+        </div>
+      </div>
 
-  </div>
+  <!-- </div> -->
 
 
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/backbone/backbone.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
   <script src="app.js"></script>
 

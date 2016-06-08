@@ -2,6 +2,10 @@ var ScheduleListView = Backbone.View.extend({
 
   tagName: 'table',
 
+  // attributes: {
+  //   class: '.col-xs-6'
+  // },
+
   el: '#schedule-list',
 
   collection: app.scheduleList,

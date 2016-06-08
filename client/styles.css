@@ -25,9 +25,18 @@ body {
 
 #task-submit:hover {background-color: rgb(147, 197, 210)}
 
-#task-list table {
+#task-list {
   border-collapse: collapse;
-  width: 25%;
+  width: 50%;
+  margin: auto;
+  font-size: 1.35em;
+  line-height: 2.5em;
+  margin-bottom: 50px;
+}
+
+#schedule-list {
+  border-collapse: collapse;
+  width: 50%;
   margin: auto;
   font-size: 1.35em;
   line-height: 2.5em;
@@ -45,5 +54,6 @@ tr:nth-child(odd) {
 tr:hover {background-color: rgb(147, 197, 210)}
 
 td {
-    border-bottom: 1px solid black;
+  width: 30%;
+  border-bottom: 1px solid black;
 }

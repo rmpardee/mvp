@@ -3,6 +3,10 @@ var TaskListView = Backbone.View.extend({
 
   tagName: 'table',
 
+  // attributes: {
+  //   class: '.col-xs-12'
+  // },
+
   el: '#task-list',
 
   collection: app.taskList,
@@ -15,7 +19,7 @@ var TaskListView = Backbone.View.extend({
   render: function() {
     this.$el.children().detach();
     // inside the <table> html, add the <th> and then append each thing in the collection
-    this.$el.html('<h1>My Tasks</h1>').append(
+    this.$el.html('<h2>My Tasks</h2>').append(
       this.collection.map(function(task){
         return new TaskEntryView({model: task}).render();
       })
